@@ -2177,12 +2177,12 @@ locals {
       regex       = "^[a-zA-Z0-9-_]+$"
     }
     virtual_machine = {
-      name        = substr(join("-", compact([local.prefix, "vm", local.suffix])), 0, 15)
-      name_unique = substr(join("-", compact([local.prefix, "vm", local.suffix_unique])), 0, 15)
+      name        = substr(join("-", compact([local.prefix, "vm", local.suffix])), 0, 25)
+      name_unique = substr(join("-", compact([local.prefix, "vm", local.suffix_unique])), 0, 25)
       dashes      = true
       slug        = "vm"
       min_length  = 1
-      max_length  = 15
+      max_length  = 25
       scope       = "resourceGroup"
       regex       = "^[^\\/\"\\[\\]:|<>+=;,?*@&_][^\\/\"\\[\\]:|<>+=;,?*@&]+[^\\/\"\\[\\]:|<>+=;,?*@&.-]$"
     }
