@@ -10,6 +10,12 @@ variable "suffix" {
   description = "It is recommended that you specify a suffix for consistency. please use only lowercase characters when possible"
 }
 
+variable "iteration" {
+  type        = string
+  default     = "00"
+  description = "Numerative iteration appended to resources"
+}
+
 variable "unique-seed" {
   description = "Custom value for the random characters to be used"
   type        = string
