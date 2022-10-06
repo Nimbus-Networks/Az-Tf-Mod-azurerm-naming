@@ -11,8 +11,8 @@ variable "suffix" {
 }
 
 variable "iteration" {
-  type        = string
-  default     = "00"
+  type        = list(string)
+  default     = ["00"]
   description = "Numerative iteration appended to resources"
 }
 
