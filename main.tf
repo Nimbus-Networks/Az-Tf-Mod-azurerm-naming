@@ -1093,7 +1093,7 @@ locals {
     key_vault = {
       name        = substr(join("-", compact([local.prefix_safe, "kv", local.iteration_safe, local.suffix_safe])), 0, 24)
       name_unique = substr(join("-", compact([local.prefix_safe, "kv", local.iteration_unique_safe, local.suffix_unique_safe])), 0, 24)
-      dashes      = true
+      dashes      = false
       slug        = "kv"
       min_length  = 3
       max_length  = 24
