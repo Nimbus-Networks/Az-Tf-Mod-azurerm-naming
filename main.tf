@@ -1091,14 +1091,14 @@ locals {
       regex       = "^[a-zA-Z0-9-._]+$"
     }
     key_vault = {
-      name        = substr(join("-", compact([local.prefix_safe, "kv", local.iteration_safe, local.suffix_safe])), 0, 24)
-      name_unique = substr(join("-", compact([local.prefix_safe, "kv", local.iteration_unique_safe, local.suffix_unique_safe])), 0, 24)
+      name        = substr(join("", compact([local.prefix_safe, "kv", local.iteration_safe, local.suffix_safe])), 0, 24)
+      name_unique = substr(join("", compact([local.prefix_safe, "kv", local.iteration_unique_safe, local.suffix_unique_safe])), 0, 24)
       dashes      = false
       slug        = "kv"
       min_length  = 3
       max_length  = 24
       scope       = "global"
-      regex       = "^[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$"
+      regex       = "^[a-z0-9]+$"
     }
     key_vault_certificate = {
       name        = substr(join("-", compact([local.prefix, "kvc", local.iteration, local.suffix])), 0, 127)
