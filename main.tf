@@ -1091,8 +1091,8 @@ locals {
       regex       = "^[a-zA-Z0-9-._]+$"
     }
     key_vault = {
-      name        = substr(join("-", compact([local.prefix, "kv", local.iteration, local.suffix])), 0, 24)
-      name_unique = substr(join("-", compact([local.prefix, "kv", local.iteration_unique, local.suffix_unique])), 0, 24)
+      name        = substr(join("-", compact([local.prefix_safe, "kv", local.iteration_safe, local.suffix_safe])), 0, 24)
+      name_unique = substr(join("-", compact([local.prefix_safe, "kv", local.iteration_unique_safe, local.suffix_unique_safe])), 0, 24)
       dashes      = true
       slug        = "kv"
       min_length  = 3
